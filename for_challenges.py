@@ -28,7 +28,7 @@ is_male = {
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 for name in names:
-    if is_male[name] is True:
+    if is_male[name]:
         print(f"{name} - М")
     else:
         print(f"{name} - Ж")
@@ -47,10 +47,8 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
 ]
 print(f"Всего {len(groups)} группы.")
-i = 1
 for group in groups:
-    print(f"Группа {i}: {len(group)} ученика.")
-    i += 1
+    print(f"Группа {groups.index(group)+1}: {len(group)} ученика.")
 
 
 # Задание 5
@@ -64,7 +62,5 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-i = 1
 for group in groups:
-    print(f"Группа {i}: {', '.join(group)} ")
-    i += 1
+    print(f"Группа {groups.index(group)+1}: {', '.join(group)} ")
