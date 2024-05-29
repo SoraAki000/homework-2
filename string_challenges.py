@@ -13,7 +13,7 @@ print(word.lower().count("а"))
 # Вывести количество гласных букв в слове
 print("-------- Задание 3. --------")
 word = 'Архангельск'
-vowels, count = ["ё", "у", "е", "ы", "а", "о", "э", "я", "и", "ю"], 0
+vowels, count = "ёуеыаоэяию", 0
 for letter in word.lower():
     if letter in vowels:
         count += 1
