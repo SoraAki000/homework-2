@@ -14,10 +14,10 @@ students = [
 ]
 count_names = {}
 for student in students:
-    if student["first_name"] not in count_names:
-        count_names[student['first_name']] = 1
-    else:
+    if student["first_name"] in count_names:
         count_names[student['first_name']] += 1
+    else:
+        count_names[student['first_name']] = 1
 for name, count in count_names.items():
     print(f"{name}: {count}")
 
@@ -35,10 +35,10 @@ students = [
 ]
 count_names, temp = {}, ["name", 0]
 for student in students:
-    if student["first_name"] not in count_names:
-        count_names[student['first_name']] = 1
-    else:
+    if student["first_name"] in count_names:
         count_names[student['first_name']] += 1
+    else:
+        count_names[student['first_name']] = 1
 for student, count in count_names.items():
     if count > temp[1]:
         temp = [student, count]
@@ -72,10 +72,10 @@ count_names, often_per_class = [], []
 for school_class in school_students:
     count_class = {}
     for student in school_class:
-        if student["first_name"] not in count_class:
-            count_class[student['first_name']] = 1
-        else:
+        if student["first_name"] in count_class:
             count_class[student['first_name']] += 1
+        else:
+            count_class[student['first_name']] = 1
     count_names.append(count_class)
 for school_class in count_names:
     temp = ["name", 0]
